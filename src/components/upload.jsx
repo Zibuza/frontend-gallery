@@ -8,7 +8,7 @@ function Upload({ onUpload }) {
     onDrop: acceptedFiles => {
       const formData = new FormData();
       formData.append('image', acceptedFiles[0]);
-      axios.post('http://localhost:5000/api/images/upload', formData)
+      axios.post('https://backend-gallery.vercel.app/api/images/upload', formData)
         .then(res => onUpload(res.data));
     }
   });

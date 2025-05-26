@@ -5,12 +5,12 @@ function Gallery() {
   const [images, setImages] = useState([]);
 
   const fetchImages = () => {
-    axios.get('http://localhost:5000/api/images')
+    axios.get('https://backend-gallery.vercel.app/api/images')
       .then(res => setImages(res.data));
   };
 
   const deleteImage = id => {
-    axios.delete(`http://localhost:5000/api/images/${id}`).then(() => fetchImages());
+    axios.delete(`https://backend-gallery.vercel.app/images/${id}`).then(() => fetchImages());
   };
 
   useEffect(fetchImages, []);
