@@ -10,7 +10,7 @@ function Gallery() {
   };
 
   const deleteImage = id => {
-    axios.delete(`https://backend-gallery.vercel.app/images/${id}`).then(() => fetchImages());
+    axios.delete(`https://backend-gallery.vercel.app/api/images/${id}`).then(() => fetchImages());
   };
 
   useEffect(fetchImages, []);
